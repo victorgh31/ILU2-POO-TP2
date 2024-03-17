@@ -13,18 +13,24 @@ public class ControlPrendreEtal {
 	}
 
 	public boolean resteEtals() {
-		//TODO a completer, attention le retour ne dit pas etre false :-)
-		return false;
+		// On vérifie s'il reste des étals disponibles dans le village
+		return village.rechercherEtalVide();
 	}
 
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
-		//TODO a completer
-		int numeroEtal = -1;
-		return numeroEtal;
+		// On prend un étal si l'identité du vendeur est vérifiée
+        if (controlVerifierIdentite.verifierIdentite(nomVendeur)) {
+            // On trouve un étal libre et on installe le vendeur
+			int numeroEtal = -1;
+			return numeroEtal;
+		} else {
+	        // Ici, l'identité n'est pas été vérifiée, donc on ne peut pas prendre d'étal
+	        return -1;
+	    }
 	}
 
 	public boolean verifierIdentite(String nomVendeur) {
-		//TODO a completer, attention le retour ne dit pas etre false :-)
-		return false;
+		// On vérifie l'identité du vendeur à l'aide du contrôleur ControlVerifierIdentite
+        return controlVerifierIdentite.verifierIdentite(nomVendeur);
 	}
 }
