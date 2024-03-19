@@ -12,7 +12,6 @@ public class BoundaryAcheterProduit {
 		this.controlAcheterProduit = controlAcheterProduit;
 	}
 
-	public void acheterProduit(String nomAcheteur) {
-		// TODO à completer
-	}
+    public void acheterProduit(String nomAcheteur) {
+    }
 }
