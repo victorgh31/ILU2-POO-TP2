@@ -13,5 +13,6 @@ public class BoundaryAcheterProduit {
 	}
 
     public void acheterProduit(String nomAcheteur) {
+    	controlAcheterProduit.acheterProduit(nomAcheteur);
     }
 }
