@@ -29,5 +29,4 @@ public class BoundaryLibererEtal {
             System.out.println("Aucun étal trouvé pour le vendeur " + nomVendeur);
         }
     }
-
 }
