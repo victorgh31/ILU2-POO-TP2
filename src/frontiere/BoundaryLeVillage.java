@@ -66,8 +66,7 @@ public class BoundaryLeVillage {
 		int choixUtilisateur;
 		do {
 			StringBuilder question = new StringBuilder();
-			question.append(
-					"1 - je souhaite que vous me présentiez votre village.\n");
+			question.append("1 - je souhaite que vous me présentiez votre village.\n");
 			question.append("2 - je voudrais emménager dans votre village.\n");
 			question.append("3 - quitter l'application.");
 			choixUtilisateur = Clavier.entrerEntier(question.toString());

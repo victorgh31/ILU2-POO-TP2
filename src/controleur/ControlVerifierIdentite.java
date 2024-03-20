@@ -14,10 +14,10 @@ public class ControlVerifierIdentite {
 		
 		Gaulois vendeur = village.trouverHabitant(nomVendeur);
 
-        if (vendeur != null && village.rechercherEtal(vendeur) != null) {
+        if (vendeur != null) {
             return true;
+        } else {
+        	return false;
         }
-        
-		return false;
 	}
 }

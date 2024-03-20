@@ -1,5 +1,6 @@
 package controleur;
 
+import frontiere.Clavier;
 import villagegaulois.Village;
 
 public class ControlPrendreEtal {
@@ -17,15 +18,12 @@ public class ControlPrendreEtal {
 		return village.rechercherEtalVide();
 	}
 
-	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
+	public boolean prendreEtal(String nomVendeur, String produit, int nbProduit) {
 		// On prend un étal si l'identité du vendeur est vérifiée
-        if (controlVerifierIdentite.verifierIdentite(nomVendeur)) {
-            // On trouve un étal libre et on installe le vendeur
-			int numeroEtal = -1;
-			return numeroEtal;
+        if (!controlVerifierIdentite.verifierIdentite(nomVendeur)) {      	
+	        return false;
 		} else {
-	        // Ici, l'identité n'est pas été vérifiée, donc on ne peut pas prendre d'étal
-	        return -1;
+    		return true;
 	    }
 	}
 
@@ -33,4 +31,5 @@ public class ControlPrendreEtal {
 		// On vérifie l'identité du vendeur à l'aide du contrôleur ControlVerifierIdentite
         return controlVerifierIdentite.verifierIdentite(nomVendeur);
 	}
+	
 }
