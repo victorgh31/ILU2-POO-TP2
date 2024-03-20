@@ -23,28 +23,28 @@ public class ControlLibererEtal {
 	 * 		[4] : quantité de produit vendu
 	 */
 	public String[] libererEtal(String nomVendeur) {
-        String[] donneesEtal = new String[5];
+		String[] donneesEtal = new String[5];
+		
         Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
         
         if (etal != null) {
-            // Récupérer les informations de l'étal
             boolean etalOccupe = etal.isEtalOccupe();
             String nomVendeurEtal = etal.getVendeur().getNom();
             String produitVendu = etal.getProduit();
             int quantiteInitiale = etal.getQuantiteInitiale();
             int quantiteVendue = etal.getQuantiteInitiale() - etal.getQuantite();
 
-            // Libérer l'étal
-            controlTrouverEtalVendeur.partirVendeur(etal.getVendeur());
-
-            // Remplir le tableau de données
             donneesEtal[0] = String.valueOf(etalOccupe);
             donneesEtal[1] = nomVendeurEtal;
             donneesEtal[2] = produitVendu;
             donneesEtal[3] = String.valueOf(quantiteInitiale);
             donneesEtal[4] = String.valueOf(quantiteVendue);
         }
-
         return donneesEtal;
-    }
+	}
+	
+	public Etal isVendeur(String nomVendeur) {
+		Etal vendeurReconnu = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
+		return vendeurReconnu;
+	}
 }
