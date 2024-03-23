@@ -113,19 +113,6 @@ public class Village {
 	public String[] donnerEtatMarche() {
 		return marche.donnerEtat();
 	}
-	
-    public boolean acheterProduit(String nomAcheteur, Gaulois vendeur, String nomProduit, int quantiteAcheter) {
-        Etal etalVendeur = rechercherEtal(vendeur);
-
-        if (etalVendeur != null && etalVendeur.isEtalOccupe() && etalVendeur.contientProduit(nomProduit)) {
-            int quantiteVendue = etalVendeur.acheterProduit(quantiteAcheter);
-            // Implémentez ici la logique pour effectuer l'achat, par exemple, déduire le coût, etc.
-            return true;
-        } else {
-            System.out.println("Le vendeur n'a pas le produit demandé en stock.");
-            return false;
-        }
-    }
     
 	////////////////////// Classe Interne ///////////////////////
 	private static class Marche {

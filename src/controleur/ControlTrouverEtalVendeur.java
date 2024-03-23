@@ -20,14 +20,6 @@ public class ControlTrouverEtalVendeur {
 		}
 		return etal;
 	}
-	
-    public void partirVendeur(Gaulois vendeur) {
-        // Implémentez la logique pour retirer le vendeur de l'étal ici
-        Etal etal = village.rechercherEtal(vendeur);
-        if (etal != null) {
-            etal.libererEtal();
-        }
-    }
 }
 
 

@@ -18,17 +18,6 @@ public class ControlPrendreEtal {
 		// On vérifie s'il reste des étals disponibles dans le village
 		return village.rechercherEtalVide();
 	}
-
-/*	
-	public boolean prendreEtal(String nomVendeur, String produit, int nbProduit) {
-		// On prend un étal si l'identité du vendeur est vérifiée
-        if (!controlVerifierIdentite.verifierIdentite(nomVendeur)) {      	
-	        return false;
-		} else {
-    		return true;
-	    }
-	}
-*/
 	
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
 		Gaulois gaulois = village.trouverHabitant(nomVendeur);
@@ -36,7 +25,6 @@ public class ControlPrendreEtal {
 	}
 	
 	public boolean verifierIdentite(String nomVendeur) {
-		// On vérifie l'identité du vendeur à l'aide du contrôleur ControlVerifierIdentite
         return controlVerifierIdentite.verifierIdentite(nomVendeur);
 	}
 	
