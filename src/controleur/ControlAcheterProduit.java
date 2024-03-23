@@ -25,4 +25,8 @@ public class ControlAcheterProduit {
 		Etal vendeur = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		return vendeur.acheterProduit(quantiteSouhaitee);
 	}
+	
+	public boolean verifierIdentite(String nomAcheteur) {
+        return controlVerifierIdentite.verifierIdentite(nomAcheteur);
+	}
 }
