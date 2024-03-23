@@ -44,7 +44,6 @@ public class ControlLibererEtal {
 	}
 	
 	public Etal isVendeur(String nomVendeur) {
-		Etal vendeurReconnu = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-		return vendeurReconnu;
+		return controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 	}
 }
