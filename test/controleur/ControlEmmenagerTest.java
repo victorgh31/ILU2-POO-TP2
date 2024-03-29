@@ -25,7 +25,6 @@ class ControlEmmenagerTest {
 	void testControlEmmenager() {
 		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
 		assertNotNull(controlEmmenager, "Constructeur ne renvoie pas null");
-		fail("Not yet implemented");
 	}
 	
     @Test
