@@ -18,8 +18,14 @@ public class BoundaryAfficherMarche {
 			System.out.println(nomAcheteur + ", vous trouverez au marché : ");
 			
 			for (int i=0; i<infosMarche.length; i+=3) {
-				System.out.println("-" + infosMarche[i] + " qui vend " + infosMarche[i+1] + " " + infosMarche[i+2]);
+				System.out.println("- " + infosMarche[i] + " qui vend " + infosMarche[i+1] + " " + infosMarche[i+2]);
 			}
+			
+			/* Sinon : 
+			 * 	for(int i=0;i<infosMarche.length;i++) {
+					System.out.println("- "+ infosMarche[i++] + " qui vend "+ infosMarche[i++] + " "+infosMarche[i++] +"\n");
+				}
+			 */
 		}
 	}
 }

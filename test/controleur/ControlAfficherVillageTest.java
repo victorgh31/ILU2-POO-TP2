@@ -21,6 +21,12 @@ class ControlAfficherVillageTest {
         controlAfficherVillage = new ControlAfficherVillage(village);
     }
 
+	@Test
+	void testControlAfficherVillage() {
+		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(village);
+		assertNotNull(controlAfficherVillage, "Constructeur ne renvoie pas null");
+	}
+    
     @Test
     void testDonnerNomsVillageois() {
         // Ajouter des habitants au village

@@ -1,6 +1,5 @@
 package controleur;
 
-import frontiere.Clavier;
 import personnages.Gaulois;
 import villagegaulois.Village;
 
@@ -15,7 +14,6 @@ public class ControlPrendreEtal {
 	}
 
 	public boolean resteEtals() {
-		// On vérifie s'il reste des étals disponibles dans le village
 		return village.rechercherEtalVide();
 	}
 	

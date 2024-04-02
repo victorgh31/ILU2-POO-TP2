@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import personnages.Chef;
 import villagegaulois.Village;
 
-class ControlEmmenagerTestModele {
+class ControlEmmenagerTest {
 	private Village village;
 	private Chef abraracourcix;
 

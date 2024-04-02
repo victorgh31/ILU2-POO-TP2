@@ -10,8 +10,6 @@ public class ControlLibererEtal {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
-
 	/**
 	 * 
 	 * @param produit
@@ -22,28 +20,20 @@ public class ControlLibererEtal {
 	 * 		[3] : quantité de produit à vendre au début du marché
 	 * 		[4] : quantité de produit vendu
 	 */
+	
 	public String[] libererEtal(String nomVendeur) {
-		String[] donneesEtal = new String[5];
-		
-        Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-        
-        if (etal != null) {
-            boolean etalOccupe = etal.isEtalOccupe();
-            String nomVendeurEtal = etal.getVendeur().getNom();
-            String produitVendu = etal.getProduit();
-            int quantiteInitiale = etal.getQuantiteInitiale();
-            int quantiteVendue = etal.getQuantiteInitiale() - etal.getQuantite();
-
-            donneesEtal[0] = String.valueOf(etalOccupe);
-            donneesEtal[1] = nomVendeurEtal;
-            donneesEtal[2] = produitVendu;
-            donneesEtal[3] = String.valueOf(quantiteInitiale);
-            donneesEtal[4] = String.valueOf(quantiteVendue);
-        }
-        return donneesEtal;
+		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
+		if (etal != null) {
+			String[] donneesEtal  = etal.etatEtal();
+			etal.libererEtal();
+			return donneesEtal;
+		} else {
+			return null;
+		}
 	}
 	
-	public Etal isVendeur(String nomVendeur) {
-		return controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
+	public boolean isVendeur(String nomVendeur) {
+		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
+		return etal != null;
 	}
 }
