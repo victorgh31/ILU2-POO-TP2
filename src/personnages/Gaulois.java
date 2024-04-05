@@ -6,7 +6,11 @@ public class Gaulois extends Personnage {
 	public Gaulois(String nom, int force) {
 		super(nom, force);
 	}
-
+	
+	public int getEffetPotion() {
+		return effetPotion;
+	}
+	
 	@Override
 	protected String prendreParole() {
 		return "Le gaulois " + super.prendreParole();
@@ -19,7 +23,7 @@ public class Gaulois extends Personnage {
 				+ etatPersonnage.substring(0, etatPersonnage.length() - 1)
 				+ ", effetPotion=" + effetPotion + "]";
 	}
-
+	
 	public void boirePotion(int forcePotion) {
 		this.effetPotion = forcePotion;
 		parler("Merci Druide, je sens que ma force est " + forcePotion
