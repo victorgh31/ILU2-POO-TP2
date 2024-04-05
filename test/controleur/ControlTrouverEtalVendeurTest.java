@@ -35,9 +35,7 @@ class ControlTrouverEtalVendeurTest {
 	@Test
 	void testTrouverEtalVendeur() {
 		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new ControlTrouverEtalVendeur(village);
-		assertTrue(, controlTrouverEtalVendeur.trouverEtalVendeur("Bonemine"));
-		assertFalse(controlTrouverEtalVendeur.trouverEtalVendeur("Obélix"));
+		assertNotNull(controlTrouverEtalVendeur.trouverEtalVendeur(vendeur.getNom()));
+		assertNull(controlTrouverEtalVendeur.trouverEtalVendeur(abraracourcix.getNom()));
 	}
-
-	
 }
