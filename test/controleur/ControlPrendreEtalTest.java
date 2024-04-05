@@ -21,12 +21,13 @@ class ControlPrendreEtalTest {
 		village = new Village("le village des irréductibles", 10, 5);
 		abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
+		
 		vendeur = new Gaulois("Bonemine", 3);
 		village.ajouterHabitant(vendeur);
 	}
 
 	@Test
-	void testResteEtal() {
+	void testResteEtals() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
 				controlVerifierIdentite, village);
@@ -43,7 +44,7 @@ class ControlPrendreEtalTest {
 	}
 	
 	@Test
-	void testVerifierIdentier() {
+	void testVerifierIdentite() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
 				controlVerifierIdentite, village);
