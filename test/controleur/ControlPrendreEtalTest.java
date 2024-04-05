@@ -14,6 +14,7 @@ class ControlPrendreEtalTest {
 	private Village village;
 	private Chef abraracourcix;
 	private Gaulois vendeur;
+	private ControlVerifierIdentite controlVerifierIdentite;
 	
 	@BeforeEach
 	public void controlPrendreEtal () {
@@ -25,29 +26,31 @@ class ControlPrendreEtalTest {
 		vendeur = new Gaulois("Bonemine", 3);
 		village.ajouterHabitant(vendeur);
 	}
-
+	
+	@Test 
+	void testControlPrendreEtal() {
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
+		assertNotNull(controlPrendreEtal, "Constructeur ne renvoie pas null");
+	}
+	
 	@Test
 	void testResteEtals() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
-				controlVerifierIdentite, village);
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
 		assertTrue(controlPrendreEtal.resteEtals());
 	}
 	
 	@Test
 	void testPrendreEtal() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
-				controlVerifierIdentite, village);
-		assertEquals(0, controlPrendreEtal.prendreEtal(
-				vendeur.getNom(), "fleurs", 10));
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
+		assertEquals(0, controlPrendreEtal.prendreEtal(vendeur.getNom(), "fleurs", 10));
 	}
 	
 	@Test
 	void testVerifierIdentite() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
-		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
-				controlVerifierIdentite, village);
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
 		assertTrue(controlPrendreEtal.verifierIdentite(vendeur.getNom()));
 	}
 

@@ -14,6 +14,7 @@ class ControlLibererEtalTest {
 	private Village village;
 	private Chef abraracourcix;
 	private Gaulois vendeur;
+	private ControlTrouverEtalVendeur controlTrouverEtalVendeur;
 	
 	@BeforeEach
 	public void controlLibererEtal () {
@@ -25,7 +26,13 @@ class ControlLibererEtalTest {
 		village.ajouterHabitant(vendeur);
 		village.installerVendeur(vendeur, "fleurs", 10);
 	}
-
+	
+	@Test 
+	void testControlLibererEtal() {
+		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(controlTrouverEtalVendeur);
+		assertNotNull(controlLibererEtal, "Constructeur ne renvoie pas null");
+	}
+	
 	@Test
 	void testIsVendeur() {
 		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new
@@ -37,7 +44,7 @@ class ControlLibererEtalTest {
 	}	
 	
 	@Test
-	void testLibererEtalUtiliser() {
+	void testLibererEtalUtilise() {
 		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new
 				ControlTrouverEtalVendeur(village);
 		ControlLibererEtal controlLibererEtal = new 
