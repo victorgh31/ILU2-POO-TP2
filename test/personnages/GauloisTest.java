@@ -9,25 +9,25 @@ class GauloisTest {
 	@Test
 	void testPrendreParole() {
 		Gaulois parlix = new Gaulois("Parlix" , 7);
-		assertEquals("Le gaulois Testix : ", parlix.prendreParole());
+		assertEquals("Le gaulois Parlix : ", parlix.prendreParole());
 	}
 	
 	@Test
 	void testToString() {
-		Gaulois tisix = new Gaulois("Tisix" , 7);
+		Gaulois string = new Gaulois("String" , 7);
 		
-		String expected = "Gaulois [nom=Testix, force=10, effetPotion=1]";
+		String expected = "Gaulois [nom=String, force=10, effetPotion=1]";
 		
-		assertEquals(expected, tisix.toString());
+		assertEquals(expected, string.toString());
 	}
 	
 	@Test
 	void testBoirePotion() {
-		Gaulois tisix = new Gaulois("Teasix" , 7);
+		Gaulois tisix = new Gaulois("Tisix" , 7);
 		
 		tisix.boirePotion(5);
 		
-		String expected = "Gaulois [nom=Testix, force=7, effetPotion=5]";
+		String expected = "Gaulois [nom=Tisix, force=7, effetPotion=5]";
 		assertEquals(expected, tisix.toString());
 	}
 
