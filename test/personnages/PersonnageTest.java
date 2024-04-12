@@ -37,7 +37,18 @@ class PersonnageTest {
 	}
 	
 	/* Demander pour le test sur parler */
+//	@Test
+//	void testParler() {
+//		Personnage victor = new Personnage("Victor", 7);
+//		assertEquals("Victor : « texte »", victor.parler("texte"));
+//	}
 	
+	@Test
+	void testParler() {
+		Personnage victor = new Personnage("Victor", 7);
+		victor.parler("texte");
+	}
+
 	@Test
 	void testPrendreParole() {
 		Personnage victor = new Personnage("Victor", 7);

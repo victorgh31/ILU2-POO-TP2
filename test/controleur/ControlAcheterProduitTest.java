@@ -45,7 +45,7 @@ class ControlAcheterProduitTest {
 				controlVerifierIdentite, controlTrouverEtalVendeur, village);
 		Gaulois[] vendeurs = controlAcheterProduit.donnerVendeurs("fleurs");
 		assertEquals(1, vendeurs.length);
-		assertEquals(vendeur.getNom(), vendeurs[0]);
+		assertEquals(vendeur.getNom(), vendeurs[0].getNom());
 	}
 	
 	@Test
