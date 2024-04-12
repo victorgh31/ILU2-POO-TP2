@@ -14,11 +14,10 @@ class GauloisTest {
 	
 	@Test
 	void testToString() {
-		Gaulois string = new Gaulois("String" , 7);
-		
-		String expected = "Gaulois [nom=String, force=10, effetPotion=1]";
-		
-		assertEquals(expected, string.toString());
+		Gaulois string = new Gaulois("String" , 7);		
+//		String expected = "Gaulois [nom=String, force=10, effetPotion=1]";
+//		assertEquals(expected, string.toString());
+		assertEquals("Gaulois [nom=String, force=7, effetPotion=1]", string.toString());
 	}
 	
 	@Test
